@@ -1,5 +1,8 @@
 import { IPost } from "@/shared/interfaces/post.interface";
 import { BiDotsHorizontalRounded } from 'react-icons/bi'
+import { AiOutlineHeart } from 'react-icons/ai'
+import { FaRegCommentDots } from 'react-icons/fa'
+import { BsBookmark } from 'react-icons/bs'
 
 export default function Post({ id, username, userImg, img, caption }: IPost) {
     return (
@@ -14,11 +17,15 @@ export default function Post({ id, username, userImg, img, caption }: IPost) {
                 <BiDotsHorizontalRounded className="h-5" />
             </div>
 
-            <img 
-                className="object-cover w-full" 
-                src={img} 
-                alt={caption} 
-            />
+            <img className="object-cover w-full" src={img} alt={caption} />
+
+            <div className="flex justify-between px-4 pt-4">
+                <div className="flex space-x-4">
+                    <AiOutlineHeart className="btn" />
+                    <FaRegCommentDots className="btn" />
+                </div>
+                <BsBookmark className="btn" />
+            </div>
         </div>
     )
 }
