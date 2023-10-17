@@ -3,6 +3,7 @@ import { BiDotsHorizontalRounded } from 'react-icons/bi'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { FaRegCommentDots } from 'react-icons/fa'
 import { BsBookmark } from 'react-icons/bs'
+import { HiOutlineEmojiHappy } from 'react-icons/hi'
 
 export default function Post({ id, username, userImg, img, caption }: IPost) {
     return (
@@ -26,6 +27,16 @@ export default function Post({ id, username, userImg, img, caption }: IPost) {
                 </div>
                 <BsBookmark className="btn" />
             </div>
+
+            <p className="p-5 truncate">
+                <span className="font-bold mr-2">{username}</span>{caption}
+            </p>
+
+            <form className="flex items-center p-4" action="">
+                <HiOutlineEmojiHappy className="h-7" />
+                <input className="boder-none flex-1 focus:ring-0" type="text" placeholder="Diga algo sobre isso..." />
+                <button className="text-blue-400 font-bold">Postar</button>
+            </form>
         </div>
     )
 }
