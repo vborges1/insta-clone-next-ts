@@ -9,7 +9,11 @@ export default function Feed() {
                 <Posts />
             </section>
 
-            <section className="hidden md:inline-grid md:col-span-1">a</section>
+            <section className="hidden md:inline-grid md:col-span-1">
+                <div className="fixed w-[380px]">
+
+                </div>
+            </section>
         </main>
     )
 }
